@@ -1,0 +1,28 @@
+﻿@model IEnumerable<QL_ThuVien.Models.So_Luong_Tung_Loai_DocGia_Result>
+
+@{
+    ViewBag.Title = "ThongKeTheoLoaiDG";
+    Layout = "~/Views/Share/layout_ThongKeDG.cshtml";
+}
+@section title{ Thống kê độc giả }
+
+<table  border="0" width="300" cellpadding="10" style="margin-right">
+    <tr style="color:White; background-color:Blue">
+        <th>Tên loại độc giả</th>
+        <th>Số lượng</th>
+   </tr>
+
+@foreach (var item in Model) {
+    <tr align="center" style="background-color:Orange; color:Green">
+        <td >
+            @Html.DisplayFor(modelItem => item.TenLoaiDocGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongDocGia)
+        </td>
+     </tr>
+}
+</table>
+<h4 style="color:Red; margin-right:auto">Biểu đồ:</h4>
+<br/>
+<br />

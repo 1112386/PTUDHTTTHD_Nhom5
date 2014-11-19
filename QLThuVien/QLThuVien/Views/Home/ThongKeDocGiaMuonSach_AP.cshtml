@@ -1,0 +1,36 @@
+﻿@model IEnumerable<QL_ThuVien.Models.ThongKeChiTietMuonSAP_Result>
+
+@{
+    ViewBag.Title = "ThongKeDocGiaMuonSach_AP";
+    Layout = "~/Views/Share/layout_ThongKeDG.cshtml";
+}
+@section title { Thống kê chi tiết độc giả sách-ấn phẩm }
+
+<table border="0" width="675" cellpadding="10">
+    <tr align="center" style="background-color:Orange">
+        <th>ĐG sử dụng thư viện</th>
+        <th>ĐG mượn sách</th>
+        <th>ĐG mượn ấn phẩm</th>
+        <th>ĐG mượn sách-ấn phẩm</th>       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr align="center" style="background-color:Yellow">
+        <td>
+            @Html.DisplayFor(modelItem => item.SLDG_TG_MuonSAP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DG_MS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DG_MAP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Muon_SAP)
+        </td>       
+    </tr>
+}
+</table>
+<h4 style="color:Red">Biểu đồ:</h4>
+<br/>
+<br />
