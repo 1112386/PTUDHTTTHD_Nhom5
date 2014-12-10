@@ -1,28 +1,92 @@
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\QLThuVien.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\QLThuVien.pdb
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\Newtonsoft.Json.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Net.Http.Formatting.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.Helpers.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.Http.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.Http.WebHost.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.Mvc.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.Razor.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.WebPages.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.WebPages.Razor.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\Newtonsoft.Json.xml
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Net.Http.Formatting.xml
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.Helpers.xml
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.Http.xml
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.Http.WebHost.xml
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.Mvc.xml
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.Razor.xml
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.WebPages.xml
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\System.Web.WebPages.Razor.xml
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\obj\Debug\QLThuVien.csprojResolveAssemblyReference.cache
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\obj\Debug\QLThuVien.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\obj\Debug\QLThuVien.pdb
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\EntityFramework.dll
-C:\Users\Phuoc\Documents\Visual Studio 2012\Projects\QLThuVien\QLThuVien\bin\EntityFramework.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\QLThuVien.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\QLThuVien.pdb
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\Antlr3.Runtime.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\EntityFramework.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\Microsoft.Web.Infrastructure.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\Newtonsoft.Json.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Net.Http.Formatting.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.Http.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.Http.WebHost.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.Mvc.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.Optimization.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.Providers.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.Razor.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.WebPages.Deployment.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.WebPages.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.WebPages.Razor.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\WebGrease.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\EntityFramework.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\Newtonsoft.Json.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Net.Http.Formatting.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.Http.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.Http.WebHost.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.Mvc.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.Razor.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.WebPages.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.WebPages.Deployment.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\System.Web.WebPages.Razor.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\obj\Debug\QLThuVien.csprojResolveAssemblyReference.cache
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\obj\Debug\QLThuVien.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\obj\Debug\QLThuVien.pdb
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\BarcodeLib.Barcode.ASP.NET.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien\QLThuVien\bin\BarcodeLib.BarcodeReader.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\QLThuVien.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\QLThuVien.pdb
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\Antlr3.Runtime.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\BarcodeLib.Barcode.ASP.NET.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\BarcodeLib.BarcodeReader.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\EntityFramework.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\Microsoft.Web.Infrastructure.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\Newtonsoft.Json.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Net.Http.Formatting.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Http.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Http.WebHost.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Mvc.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Optimization.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Providers.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Razor.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.Deployment.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.Razor.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\WebGrease.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\EntityFramework.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\Newtonsoft.Json.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Net.Http.Formatting.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Http.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Http.WebHost.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Mvc.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Razor.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.Deployment.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.Razor.xml
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\obj\Debug\QLThuVien.csprojResolveAssemblyReference.cache
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\obj\Debug\QLThuVien.dll
+F:\HTTT Hiện đại\Đồ án\QLThuVien_ver2.0\QLThuVien\obj\Debug\QLThuVien.pdb
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\QLThuVien.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\QLThuVien.pdb
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\Antlr3.Runtime.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\BarcodeLib.Barcode.ASP.NET.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\BarcodeLib.BarcodeReader.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\Bytescout.BarCodeReader.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\Bytescout.Scan.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\EntityFramework.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\Microsoft.Web.Infrastructure.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\Newtonsoft.Json.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Mvc.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Optimization.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Providers.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Razor.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.Deployment.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.Razor.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\WebGrease.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\EntityFramework.xml
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\Newtonsoft.Json.xml
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Mvc.xml
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.Razor.xml
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.xml
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.Deployment.xml
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\bin\System.Web.WebPages.Razor.xml
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\obj\Debug\QLThuVien.dll
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\obj\Debug\QLThuVien.pdb
+D:\Hoc tap\QLThuVien_ver2.0\QLThuVien\obj\Debug\QLThuVien.csprojResolveAssemblyReference.cache

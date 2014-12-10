@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0A793CB5-E9F5-43EA-A436-C4314E5CFF1F}</ProjectGuid>
+    <ProjectGuid>{7C4A5DB5-F04F-4745-A700-32412BEF120D}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -39,8 +39,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="BarcodeLib.Barcode.ASP.NET">
+      <HintPath>.\BarcodeLib.Barcode.ASP.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib.BarcodeReader">
+      <HintPath>.\BarcodeLib.BarcodeReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Bytescout.BarCodeReader">
+      <HintPath>.\Bytescout.BarCodeReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Bytescout.Scan">
+      <HintPath>.\Bytescout.Scan.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -64,6 +73,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -78,10 +90,6 @@
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
-    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
     </Reference>
@@ -91,6 +99,12 @@
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -108,168 +122,208 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BarcodeController.cs" />
+    <Compile Include="Controllers\DocGiaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MuonTraController.cs" />
+    <Compile Include="Controllers\SendMailerController.cs" />
+    <Compile Include="Controllers\ThuThuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\anpham.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\anpham_phieumuonAP.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\anpham_phieuphatAP.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dausach.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\docgia.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DSMuon.cs" />
+    <Compile Include="Models\DSMuonModels.cs" />
     <Compile Include="Models\linhvuc.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\loaidocgia.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ModelQLThuVien.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQLThuVien.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ModelQLThuVien.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ModelQLThuVien.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQLThuVien.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\MailModel.cs" />
     <Compile Include="Models\nhanvien.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\nhaxuatban.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\phieumuonAP.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\phieumuonsach.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\phieuphatAP.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\phieuphatsach.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLThuVien.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLThuVien.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLThuVien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLThuVien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLThuVien.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\sach.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\SachModels.cs" />
     <Compile Include="Models\sach_phieumuonsach.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sach_phieuphatsach.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tacgia.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\taikhoan.cs">
-      <DependentUpon>ModelQLThuVien.tt</DependentUpon>
+      <DependentUpon>QLThuVien.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\Nhan.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\Jquery_ui.css" />
+    <Content Include="Content\css\Style_P.css" />
+    <Content Include="Content\css\tableft.gif" />
+    <Content Include="Content\css\tabright.gif" />
     <Content Include="Content\css\Tu.css" />
+    <Content Include="Content\css\Viet.css" />
     <Content Include="Content\images\1413690263.jpg" />
     <Content Include="Content\images\bg.gif" />
+    <Content Include="Content\images\facts-figures-reading.jpg" />
     <Content Include="Content\images\menu_li_link.gif" />
+    <Content Include="Content\images\Nhan\%281%29.jpg" />
+    <Content Include="Content\images\Nhan\%282%29.jpg" />
+    <Content Include="Content\images\Nhan\%283%29.jpg" />
+    <Content Include="Content\images\Nhan\%284%29.jpg" />
     <Content Include="Content\images\quote_1.gif" />
     <Content Include="Content\images\quote_2.gif" />
+    <Content Include="Content\images\sachcu.jpg" />
     <Content Include="Content\images\search.gif" />
+    <Content Include="Content\images\search_book.jpg" />
     <Content Include="Content\images\spacer.gif" />
     <Content Include="Content\images\submit.gif" />
+    <Content Include="Content\js\barcode.js" />
+    <Content Include="Content\js\jquery.js" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
+    <Content Include="ClassDiagram1.cd" />
+    <EntityDeploy Include="Models\QLThuVien.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLThuVien.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\QLThuVien.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLThuVien.edmx</DependentUpon>
+      <LastGenOutput>QLThuVien.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\QLThuVien.edmx.diagram">
+      <DependentUpon>QLThuVien.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\QLThuVien.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLThuVien.edmx</DependentUpon>
+      <LastGenOutput>QLThuVien.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\support.cshtml" />
+    <Content Include="Views\Home\ThongKeDocGiaMuonSach_AP.cshtml" />
+    <Content Include="Views\Home\ThongKeDocGiaPhat.cshtml" />
+    <Content Include="Views\Home\ThongKeSuDungThuVien.cshtml" />
+    <Content Include="Views\Home\ThongKeTheoLoaiDG.cshtml" />
+    <Content Include="Views\Share\layout.cshtml" />
+    <Content Include="Views\Share\Layout_DocGia.cshtml" />
+    <Content Include="Views\Share\layout_ThuThu.cshtml" />
+    <Content Include="Views\Share\LoginForm.cshtml" />
+    <Content Include="Views\Share\LoginSuccess.cshtml" />
+    <Content Include="Views\DocGia\DocGia_Home.cshtml" />
+    <Content Include="Views\ThuThu\ThuThu_Home.cshtml" />
+    <Content Include="Views\MuonTra\GetInfo.cshtml" />
+    <Content Include="Views\Home\about.cshtml" />
+    <Content Include="Views\MuonTra\GetInfoBook.cshtml" />
+    <Content Include="Views\MuonTra\MaThe.cshtml" />
+    <Content Include="Views\Barcode\Generator.cshtml" />
+    <Content Include="Views\Barcode\Index.cshtml" />
+    <Content Include="Views\MuonTra\DSMuon.cshtml" />
+    <Content Include="Views\MuonTra\ChiTiet.cshtml" />
+    <Content Include="Views\SendMailer\SendMail.cshtml" />
+    <Content Include="Views\SendMailer\Remind.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\js\" />
-    <Folder Include="Views\Biên mục\" />
-    <Folder Include="Views\Bổ sung\" />
-    <Folder Include="Views\QL độc giả\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Share\layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\support.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Share\Layout_BoSung.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="Models\ModelQLThuVien.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelQLThuVien.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Models\ModelQLThuVien.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelQLThuVien.edmx</DependentUpon>
-      <LastGenOutput>ModelQLThuVien.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\ModelQLThuVien.edmx.diagram">
-      <DependentUpon>ModelQLThuVien.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\ModelQLThuVien.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelQLThuVien.edmx</DependentUpon>
-      <LastGenOutput>ModelQLThuVien.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Share\LoginForm.cshtml" />
-    <Content Include="Views\Share\LoginSuccess.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Share\layout_ThongKeDG.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\ThongKeDocGiaMuonSach_AP.cshtml" />
-    <Content Include="Views\Home\ThongKeDocGiaPhat.cshtml" />
-    <Content Include="Views\Home\ThongKeSuDungThuVien.cshtml" />
-    <Content Include="Views\Home\ThongKeTheoLoaiDG.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -289,7 +343,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63266/</IISUrl>
+          <IISUrl>http://localhost:56454/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

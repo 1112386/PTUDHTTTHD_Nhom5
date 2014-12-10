@@ -1,0 +1,93 @@
+﻿@model IEnumerable<QLThuVien.Models.DSMuonModels>
+
+@{
+    ViewBag.Title = "ChiTiet";
+    Layout = "~/Views/Share/layout_ThuThu.cshtml";
+}
+
+@section title { Chi Tiết }
+
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayMuon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayTra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaCaBietSach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoTenDG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaChiDG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailDG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaTheDG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoDTDG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnhDG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GioiTinhDG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaDG)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayMuon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayTra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaCaBietSach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoTenDG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChiDG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailDG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaTheDG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoDTDG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnhDG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GioiTinhDG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaDG)
+        </td>
+    </tr>
+}
+
+</table>

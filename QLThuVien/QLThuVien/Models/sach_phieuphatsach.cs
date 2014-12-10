@@ -16,6 +16,7 @@ namespace QLThuVien.Models
     {
         public int id { get; set; }
         public int MaPhieuPhatSach { get; set; }
+        public string TrangThai { get; set; }
     
         public virtual phieuphatsach phieuphatsach { get; set; }
     }

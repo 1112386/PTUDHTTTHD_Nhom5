@@ -15,7 +15,7 @@ namespace QLThuVien.Controllers
         // GET: /Account/
 
         public ActionResult Login(FormCollection f)
-        {//nay ctrl c mà ra hash khác
+        {
             string username=f["username"].ToString();
             string password=f["password"].ToString();
             if(username==null ||username=="" || password==null || password=="")
@@ -30,6 +30,7 @@ namespace QLThuVien.Controllers
                 if(account.pass==passmd5)
                 {
                     Session["username"]=username;
+                    Session["LoaiTaiKhoan"] = account.LoaiTaiKhoan;
                 }
             }
             return RedirectToAction("Index","Home");
@@ -51,6 +52,10 @@ namespace QLThuVien.Controllers
                 sb.Append(b.ToString("x2"));
             }
             return sb.ToString();
+        }
+        public ActionResult demo()
+        {
+            return View();
         }
 
     }

@@ -121,7 +121,7 @@ a.rm, a.com {
 	padding:0;
 	float:left;
 	width:687px;
-	border: 1px solid #000;
+	
 font:normal 14px Arial, Helvetica, sans-serif;
 	color:#595959;
 }
@@ -372,7 +372,6 @@ ol li .send {
 	line-height:0;
 }
 /**********LOGIN***********/
-
 #login
 {
     display: inline-block;

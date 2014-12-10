@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyThuVienModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QuanLyThuVienEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="anphams" EntityType="QuanLyThuVienModel.anpham" />
+    <EntitySet Name="anpham_phieumuonAP" EntityType="QuanLyThuVienModel.anpham_phieumuonAP" />
+    <EntitySet Name="anpham_phieuphatAP" EntityType="QuanLyThuVienModel.anpham_phieuphatAP" />
+    <EntitySet Name="dausaches" EntityType="QuanLyThuVienModel.dausach" />
+    <EntitySet Name="docgias" EntityType="QuanLyThuVienModel.docgia" />
+    <EntitySet Name="linhvucs" EntityType="QuanLyThuVienModel.linhvuc" />
+    <EntitySet Name="loaidocgias" EntityType="QuanLyThuVienModel.loaidocgia" />
+    <EntitySet Name="nhanviens" EntityType="QuanLyThuVienModel.nhanvien" />
+    <EntitySet Name="nhaxuatbans" EntityType="QuanLyThuVienModel.nhaxuatban" />
+    <EntitySet Name="phieumuonAPs" EntityType="QuanLyThuVienModel.phieumuonAP" />
+    <EntitySet Name="phieumuonsaches" EntityType="QuanLyThuVienModel.phieumuonsach" />
+    <EntitySet Name="phieuphatAPs" EntityType="QuanLyThuVienModel.phieuphatAP" />
+    <EntitySet Name="phieuphatsaches" EntityType="QuanLyThuVienModel.phieuphatsach" />
+    <EntitySet Name="saches" EntityType="QuanLyThuVienModel.sach" />
+    <EntitySet Name="sach_phieumuonsach" EntityType="QuanLyThuVienModel.sach_phieumuonsach" />
+    <EntitySet Name="sach_phieuphatsach" EntityType="QuanLyThuVienModel.sach_phieuphatsach" />
+    <EntitySet Name="tacgias" EntityType="QuanLyThuVienModel.tacgia" />
+    <EntitySet Name="taikhoans" EntityType="QuanLyThuVienModel.taikhoan" />
+    <AssociationSet Name="fk_anpham_nhaxuatban" Association="QuanLyThuVienModel.fk_anpham_nhaxuatban">
+      <End Role="nhaxuatban" EntitySet="nhaxuatbans" />
+      <End Role="anpham" EntitySet="anphams" />
+    </AssociationSet>
+    <AssociationSet Name="fk_anpham_phieumuonAP__anpham" Association="QuanLyThuVienModel.fk_anpham_phieumuonAP__anpham">
+      <End Role="anpham" EntitySet="anphams" />
+      <End Role="anpham_phieumuonAP" EntitySet="anpham_phieumuonAP" />
+    </AssociationSet>
+    <AssociationSet Name="fk_anpham_phieuphatAP__phieuphatAP" Association="QuanLyThuVienModel.fk_anpham_phieuphatAP__phieuphatAP">
+      <End Role="phieuphatAP" EntitySet="phieuphatAPs" />
+      <End Role="anpham_phieuphatAP" EntitySet="anpham_phieuphatAP" />
+    </AssociationSet>
+    <AssociationSet Name="fk_dausach_linhvuc" Association="QuanLyThuVienModel.fk_dausach_linhvuc">
+      <End Role="linhvuc" EntitySet="linhvucs" />
+      <End Role="dausach" EntitySet="dausaches" />
+    </AssociationSet>
+    <AssociationSet Name="fk_dausach_nhaxuatban" Association="QuanLyThuVienModel.fk_dausach_nhaxuatban">
+      <End Role="nhaxuatban" EntitySet="nhaxuatbans" />
+      <End Role="dausach" EntitySet="dausaches" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sach_dausach" Association="QuanLyThuVienModel.fk_sach_dausach">
+      <End Role="dausach" EntitySet="dausaches" />
+      <End Role="sach" EntitySet="saches" />
+    </AssociationSet>
+    <AssociationSet Name="fk_docgia_loaidocgia" Association="QuanLyThuVienModel.fk_docgia_loaidocgia">
+      <End Role="loaidocgia" EntitySet="loaidocgias" />
+      <End Role="docgia" EntitySet="docgias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_docgia_taikhoan" Association="QuanLyThuVienModel.fk_docgia_taikhoan">
+      <End Role="taikhoan" EntitySet="taikhoans" />
+      <End Role="docgia" EntitySet="docgias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_phieumuonAP_docgia" Association="QuanLyThuVienModel.fk_phieumuonAP_docgia">
+      <End Role="docgia" EntitySet="docgias" />
+      <End Role="phieumuonAP" EntitySet="phieumuonAPs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_phieumuonsach_docgia" Association="QuanLyThuVienModel.fk_phieumuonsach_docgia">
+      <End Role="docgia" EntitySet="docgias" />
+      <End Role="phieumuonsach" EntitySet="phieumuonsaches" />
+    </AssociationSet>
+    <AssociationSet Name="fk_phieuphatAP_docgia" Association="QuanLyThuVienModel.fk_phieuphatAP_docgia">
+      <End Role="docgia" EntitySet="docgias" />
+      <End Role="phieuphatAP" EntitySet="phieuphatAPs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_phieuphatsach_docgia" Association="QuanLyThuVienModel.fk_phieuphatsach_docgia">
+      <End Role="docgia" EntitySet="docgias" />
+      <End Role="phieuphatsach" EntitySet="phieuphatsaches" />
+    </AssociationSet>
+    <AssociationSet Name="fk_nhanvien_taikhoan" Association="QuanLyThuVienModel.fk_nhanvien_taikhoan">
+      <End Role="taikhoan" EntitySet="taikhoans" />
+      <End Role="nhanvien" EntitySet="nhanviens" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sach_phieumuonsach__phieumuonsach" Association="QuanLyThuVienModel.fk_sach_phieumuonsach__phieumuonsach">
+      <End Role="phieumuonsach" EntitySet="phieumuonsaches" />
+      <End Role="sach_phieumuonsach" EntitySet="sach_phieumuonsach" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sach_phieuphatsach__phieuphatsach" Association="QuanLyThuVienModel.fk_sach_phieuphatsach__phieuphatsach">
+      <End Role="phieuphatsach" EntitySet="phieuphatsaches" />
+      <End Role="sach_phieuphatsach" EntitySet="sach_phieuphatsach" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sach_phieumuonsach__sach" Association="QuanLyThuVienModel.fk_sach_phieumuonsach__sach">
+      <End Role="sach" EntitySet="saches" />
+      <End Role="sach_phieumuonsach" EntitySet="sach_phieumuonsach" />
+    </AssociationSet>
+    <AssociationSet Name="dausach_tacgia" Association="QuanLyThuVienModel.dausach_tacgia">
+      <End Role="dausach" EntitySet="dausaches" />
+      <End Role="tacgia" EntitySet="tacgias" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="anpham">
+    <Key>
+      <PropertyRef Name="MaAnPham" />
+    </Key>
+    <Property Name="MaAnPham" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaNXB" Type="Int32" />
+    <Property Name="So" Type="Int32" />
+    <Property Name="Nam" Type="String" MaxLength="5" Unicode="false" FixedLength="true" />
+    <Property Name="ISSN" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="TongBienTap" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="GiaTien" Type="Double" />
+    <NavigationProperty Name="nhaxuatban" Relationship="QuanLyThuVienModel.fk_anpham_nhaxuatban" FromRole="anpham" ToRole="nhaxuatban" />
+    <NavigationProperty Name="anpham_phieumuonAP" Relationship="QuanLyThuVienModel.fk_anpham_phieumuonAP__anpham" FromRole="anpham" ToRole="anpham_phieumuonAP" />
+  </EntityType>
+  <EntityType Name="anpham_phieumuonAP">
+    <Key>
+      <PropertyRef Name="MaAnPham" />
+      <PropertyRef Name="MaPhieuMuonAP" />
+    </Key>
+    <Property Name="MaAnPham" Type="Int32" Nullable="false" />
+    <Property Name="MaPhieuMuonAP" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="anpham" Relationship="QuanLyThuVienModel.fk_anpham_phieumuonAP__anpham" FromRole="anpham_phieumuonAP" ToRole="anpham" />
+  </EntityType>
+  <EntityType Name="anpham_phieuphatAP">
+    <Key>
+      <PropertyRef Name="MaAnPham" />
+      <PropertyRef Name="MaPhieuPhatAP" />
+    </Key>
+    <Property Name="MaAnPham" Type="Int32" Nullable="false" />
+    <Property Name="MaPhieuPhatAP" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="phieuphatAP" Relationship="QuanLyThuVienModel.fk_anpham_phieuphatAP__phieuphatAP" FromRole="anpham_phieuphatAP" ToRole="phieuphatAP" />
+  </EntityType>
+  <EntityType Name="dausach">
+    <Key>
+      <PropertyRef Name="MaDauSach" />
+    </Key>
+    <Property Name="MaDauSach" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaNXB" Type="Int32" />
+    <Property Name="NgonNgu" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="MaLinhVuc" Type="Int32" />
+    <Property Name="ISBN" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="NhanDeChinh" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="NhanDeSongSong" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="NhanDeKhac" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="NamXuatBan" Type="String" MaxLength="5" Unicode="false" FixedLength="true" />
+    <Property Name="BanQuyen" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GiaTien" Type="Double" />
+    <NavigationProperty Name="linhvuc" Relationship="QuanLyThuVienModel.fk_dausach_linhvuc" FromRole="dausach" ToRole="linhvuc" />
+    <NavigationProperty Name="nhaxuatban" Relationship="QuanLyThuVienModel.fk_dausach_nhaxuatban" FromRole="dausach" ToRole="nhaxuatban" />
+    <NavigationProperty Name="saches" Relationship="QuanLyThuVienModel.fk_sach_dausach" FromRole="dausach" ToRole="sach" />
+    <NavigationProperty Name="tacgias" Relationship="QuanLyThuVienModel.dausach_tacgia" FromRole="dausach" ToRole="tacgia" />
+  </EntityType>
+  <EntityType Name="docgia">
+    <Key>
+      <PropertyRef Name="MaDocGia" />
+    </Key>
+    <Property Name="MaDocGia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaThe" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="HoTen" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GioiTinh" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="SoDT" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="NgayDangKy" Type="DateTime" Precision="0" />
+    <Property Name="TaiKhoan" Type="Int32" />
+    <Property Name="LoaiDocGia" Type="Int32" />
+    <Property Name="AnhDocGia" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="loaidocgia1" Relationship="QuanLyThuVienModel.fk_docgia_loaidocgia" FromRole="docgia" ToRole="loaidocgia" />
+    <NavigationProperty Name="taikhoan1" Relationship="QuanLyThuVienModel.fk_docgia_taikhoan" FromRole="docgia" ToRole="taikhoan" />
+    <NavigationProperty Name="phieumuonAPs" Relationship="QuanLyThuVienModel.fk_phieumuonAP_docgia" FromRole="docgia" ToRole="phieumuonAP" />
+    <NavigationProperty Name="phieumuonsaches" Relationship="QuanLyThuVienModel.fk_phieumuonsach_docgia" FromRole="docgia" ToRole="phieumuonsach" />
+    <NavigationProperty Name="phieuphatAPs" Relationship="QuanLyThuVienModel.fk_phieuphatAP_docgia" FromRole="docgia" ToRole="phieuphatAP" />
+    <NavigationProperty Name="phieuphatsaches" Relationship="QuanLyThuVienModel.fk_phieuphatsach_docgia" FromRole="docgia" ToRole="phieuphatsach" />
+  </EntityType>
+  <EntityType Name="linhvuc">
+    <Key>
+      <PropertyRef Name="MaLinhVuc" />
+    </Key>
+    <Property Name="MaLinhVuc" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLinhvuc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ThongTin" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="dausaches" Relationship="QuanLyThuVienModel.fk_dausach_linhvuc" FromRole="linhvuc" ToRole="dausach" />
+  </EntityType>
+  <EntityType Name="loaidocgia">
+    <Key>
+      <PropertyRef Name="MaLoaiDocGia" />
+    </Key>
+    <Property Name="MaLoaiDocGia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiDocGia" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="SoSachDaMuon" Type="Int32" />
+    <Property Name="ThoiGianMuon" Type="Int32" />
+    <Property Name="SoLanDuocGiaHan" Type="Int32" />
+    <Property Name="TienPhat" Type="Double" />
+    <NavigationProperty Name="docgias" Relationship="QuanLyThuVienModel.fk_docgia_loaidocgia" FromRole="loaidocgia" ToRole="docgia" />
+  </EntityType>
+  <EntityType Name="nhanvien">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaThe" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="HoTen" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GioiTinh" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="SoDT" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="TaiKhoan" Type="Int32" />
+    <NavigationProperty Name="taikhoan1" Relationship="QuanLyThuVienModel.fk_nhanvien_taikhoan" FromRole="nhanvien" ToRole="taikhoan" />
+  </EntityType>
+  <EntityType Name="nhaxuatban">
+    <Key>
+      <PropertyRef Name="MaNXB" />
+    </Key>
+    <Property Name="MaNXB" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNXB" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SoĐT" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="website" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="anphams" Relationship="QuanLyThuVienModel.fk_anpham_nhaxuatban" FromRole="nhaxuatban" ToRole="anpham" />
+    <NavigationProperty Name="dausaches" Relationship="QuanLyThuVienModel.fk_dausach_nhaxuatban" FromRole="nhaxuatban" ToRole="dausach" />
+  </EntityType>
+  <EntityType Name="phieumuonAP">
+    <Key>
+      <PropertyRef Name="MaPhieuMuonAP" />
+    </Key>
+    <Property Name="MaPhieuMuonAP" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaDocGia" Type="Int32" />
+    <Property Name="NgayMuon" Type="DateTime" Precision="0" />
+    <Property Name="NgayHetHan" Type="DateTime" Precision="0" />
+    <Property Name="GhiChu" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="SoLanGiaHan" Type="Int32" />
+    <NavigationProperty Name="docgia" Relationship="QuanLyThuVienModel.fk_phieumuonAP_docgia" FromRole="phieumuonAP" ToRole="docgia" />
+  </EntityType>
+  <EntityType Name="phieumuonsach">
+    <Key>
+      <PropertyRef Name="MaPhieuMuonSach" />
+    </Key>
+    <Property Name="MaPhieuMuonSach" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaDocGia" Type="Int32" />
+    <Property Name="NgayMuon" Type="DateTime" Precision="0" />
+    <Property Name="NgayHetHan" Type="DateTime" Precision="0" />
+    <Property Name="GhiChu" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="SoLanGiaHan" Type="Int32" />
+    <Property Name="DaTraHet" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="docgia" Relationship="QuanLyThuVienModel.fk_phieumuonsach_docgia" FromRole="phieumuonsach" ToRole="docgia" />
+    <NavigationProperty Name="sach_phieumuonsach" Relationship="QuanLyThuVienModel.fk_sach_phieumuonsach__phieumuonsach" FromRole="phieumuonsach" ToRole="sach_phieumuonsach" />
+  </EntityType>
+  <EntityType Name="phieuphatAP">
+    <Key>
+      <PropertyRef Name="MaPhieuPhatAP" />
+    </Key>
+    <Property Name="MaPhieuPhatAP" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaDocGia" Type="Int32" />
+    <Property Name="SoTienPhat" Type="Double" />
+    <Property Name="LyDo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="DaDong" Type="Boolean" />
+    <NavigationProperty Name="anpham_phieuphatAP" Relationship="QuanLyThuVienModel.fk_anpham_phieuphatAP__phieuphatAP" FromRole="phieuphatAP" ToRole="anpham_phieuphatAP" />
+    <NavigationProperty Name="docgia" Relationship="QuanLyThuVienModel.fk_phieuphatAP_docgia" FromRole="phieuphatAP" ToRole="docgia" />
+  </EntityType>
+  <EntityType Name="phieuphatsach">
+    <Key>
+      <PropertyRef Name="MaPhieuPhatSach" />
+    </Key>
+    <Property Name="MaPhieuPhatSach" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaDocGia" Type="Int32" />
+    <Property Name="SoTienPhat" Type="Double" />
+    <Property Name="LyDo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="DaDong" Type="Boolean" />
+    <NavigationProperty Name="docgia" Relationship="QuanLyThuVienModel.fk_phieuphatsach_docgia" FromRole="phieuphatsach" ToRole="docgia" />
+    <NavigationProperty Name="sach_phieuphatsach" Relationship="QuanLyThuVienModel.fk_sach_phieuphatsach__phieuphatsach" FromRole="phieuphatsach" ToRole="sach_phieuphatsach" />
+  </EntityType>
+  <EntityType Name="sach">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaCaBiet" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="LanTaiBan" Type="Int32" />
+    <Property Name="MaDauSach" Type="Int32" />
+    <NavigationProperty Name="dausach" Relationship="QuanLyThuVienModel.fk_sach_dausach" FromRole="sach" ToRole="dausach" />
+    <NavigationProperty Name="sach_phieumuonsach" Relationship="QuanLyThuVienModel.fk_sach_phieumuonsach__sach" FromRole="sach" ToRole="sach_phieumuonsach" />
+  </EntityType>
+  <EntityType Name="sach_phieumuonsach">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="MaPhieuMuonSach" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="MaPhieuMuonSach" Type="Int32" Nullable="false" />
+    <Property Name="TrangThai" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="phieumuonsach" Relationship="QuanLyThuVienModel.fk_sach_phieumuonsach__phieumuonsach" FromRole="sach_phieumuonsach" ToRole="phieumuonsach" />
+    <NavigationProperty Name="sach" Relationship="QuanLyThuVienModel.fk_sach_phieumuonsach__sach" FromRole="sach_phieumuonsach" ToRole="sach" />
+  </EntityType>
+  <EntityType Name="sach_phieuphatsach">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="MaPhieuPhatSach" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="MaPhieuPhatSach" Type="Int32" Nullable="false" />
+    <Property Name="TrangThai" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="phieuphatsach" Relationship="QuanLyThuVienModel.fk_sach_phieuphatsach__phieuphatsach" FromRole="sach_phieuphatsach" ToRole="phieuphatsach" />
+  </EntityType>
+  <EntityType Name="tacgia">
+    <Key>
+      <PropertyRef Name="MaTacGia" />
+    </Key>
+    <Property Name="MaTacGia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="HocVi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ButDanh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="dausaches" Relationship="QuanLyThuVienModel.dausach_tacgia" FromRole="tacgia" ToRole="dausach" />
+  </EntityType>
+  <EntityType Name="taikhoan">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="pass" Type="String" MaxLength="32" Unicode="false" FixedLength="true" />
+    <Property Name="LoaiTaiKhoan" Type="Int32" />
+    <NavigationProperty Name="docgias" Relationship="QuanLyThuVienModel.fk_docgia_taikhoan" FromRole="taikhoan" ToRole="docgia" />
+    <NavigationProperty Name="nhanviens" Relationship="QuanLyThuVienModel.fk_nhanvien_taikhoan" FromRole="taikhoan" ToRole="nhanvien" />
+  </EntityType>
+  <Association Name="fk_anpham_nhaxuatban">
+    <End Role="nhaxuatban" Type="QuanLyThuVienModel.nhaxuatban" Multiplicity="0..1" />
+    <End Role="anpham" Type="QuanLyThuVienModel.anpham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhaxuatban">
+        <PropertyRef Name="MaNXB" />
+      </Principal>
+      <Dependent Role="anpham">
+        <PropertyRef Name="MaNXB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_anpham_phieumuonAP__anpham">
+    <End Role="anpham" Type="QuanLyThuVienModel.anpham" Multiplicity="1" />
+    <End Role="anpham_phieumuonAP" Type="QuanLyThuVienModel.anpham_phieumuonAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="anpham">
+        <PropertyRef Name="MaAnPham" />
+      </Principal>
+      <Dependent Role="anpham_phieumuonAP">
+        <PropertyRef Name="MaAnPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_anpham_phieuphatAP__phieuphatAP">
+    <End Role="phieuphatAP" Type="QuanLyThuVienModel.phieuphatAP" Multiplicity="1" />
+    <End Role="anpham_phieuphatAP" Type="QuanLyThuVienModel.anpham_phieuphatAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phieuphatAP">
+        <PropertyRef Name="MaPhieuPhatAP" />
+      </Principal>
+      <Dependent Role="anpham_phieuphatAP">
+        <PropertyRef Name="MaPhieuPhatAP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_dausach_linhvuc">
+    <End Role="linhvuc" Type="QuanLyThuVienModel.linhvuc" Multiplicity="0..1" />
+    <End Role="dausach" Type="QuanLyThuVienModel.dausach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="linhvuc">
+        <PropertyRef Name="MaLinhVuc" />
+      </Principal>
+      <Dependent Role="dausach">
+        <PropertyRef Name="MaLinhVuc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_dausach_nhaxuatban">
+    <End Role="nhaxuatban" Type="QuanLyThuVienModel.nhaxuatban" Multiplicity="0..1" />
+    <End Role="dausach" Type="QuanLyThuVienModel.dausach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhaxuatban">
+        <PropertyRef Name="MaNXB" />
+      </Principal>
+      <Dependent Role="dausach">
+        <PropertyRef Name="MaNXB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sach_dausach">
+    <End Role="dausach" Type="QuanLyThuVienModel.dausach" Multiplicity="0..1" />
+    <End Role="sach" Type="QuanLyThuVienModel.sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dausach">
+        <PropertyRef Name="MaDauSach" />
+      </Principal>
+      <Dependent Role="sach">
+        <PropertyRef Name="MaDauSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_docgia_loaidocgia">
+    <End Role="loaidocgia" Type="QuanLyThuVienModel.loaidocgia" Multiplicity="0..1" />
+    <End Role="docgia" Type="QuanLyThuVienModel.docgia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loaidocgia">
+        <PropertyRef Name="MaLoaiDocGia" />
+      </Principal>
+      <Dependent Role="docgia">
+        <PropertyRef Name="LoaiDocGia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_docgia_taikhoan">
+    <End Role="taikhoan" Type="QuanLyThuVienModel.taikhoan" Multiplicity="0..1" />
+    <End Role="docgia" Type="QuanLyThuVienModel.docgia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="taikhoan">
+        <PropertyRef Name="MaTaiKhoan" />
+      </Principal>
+      <Dependent Role="docgia">
+        <PropertyRef Name="TaiKhoan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_phieumuonAP_docgia">
+    <End Role="docgia" Type="QuanLyThuVienModel.docgia" Multiplicity="0..1" />
+    <End Role="phieumuonAP" Type="QuanLyThuVienModel.phieumuonAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="docgia">
+        <PropertyRef Name="MaDocGia" />
+      </Principal>
+      <Dependent Role="phieumuonAP">
+        <PropertyRef Name="MaDocGia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_phieumuonsach_docgia">
+    <End Role="docgia" Type="QuanLyThuVienModel.docgia" Multiplicity="0..1" />
+    <End Role="phieumuonsach" Type="QuanLyThuVienModel.phieumuonsach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="docgia">
+        <PropertyRef Name="MaDocGia" />
+      </Principal>
+      <Dependent Role="phieumuonsach">
+        <PropertyRef Name="MaDocGia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_phieuphatAP_docgia">
+    <End Role="docgia" Type="QuanLyThuVienModel.docgia" Multiplicity="0..1" />
+    <End Role="phieuphatAP" Type="QuanLyThuVienModel.phieuphatAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="docgia">
+        <PropertyRef Name="MaDocGia" />
+      </Principal>
+      <Dependent Role="phieuphatAP">
+        <PropertyRef Name="MaDocGia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_phieuphatsach_docgia">
+    <End Role="docgia" Type="QuanLyThuVienModel.docgia" Multiplicity="0..1" />
+    <End Role="phieuphatsach" Type="QuanLyThuVienModel.phieuphatsach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="docgia">
+        <PropertyRef Name="MaDocGia" />
+      </Principal>
+      <Dependent Role="phieuphatsach">
+        <PropertyRef Name="MaDocGia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_nhanvien_taikhoan">
+    <End Role="taikhoan" Type="QuanLyThuVienModel.taikhoan" Multiplicity="0..1" />
+    <End Role="nhanvien" Type="QuanLyThuVienModel.nhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="taikhoan">
+        <PropertyRef Name="MaTaiKhoan" />
+      </Principal>
+      <Dependent Role="nhanvien">
+        <PropertyRef Name="TaiKhoan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sach_phieumuonsach__phieumuonsach">
+    <End Role="phieumuonsach" Type="QuanLyThuVienModel.phieumuonsach" Multiplicity="1" />
+    <End Role="sach_phieumuonsach" Type="QuanLyThuVienModel.sach_phieumuonsach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phieumuonsach">
+        <PropertyRef Name="MaPhieuMuonSach" />
+      </Principal>
+      <Dependent Role="sach_phieumuonsach">
+        <PropertyRef Name="MaPhieuMuonSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sach_phieuphatsach__phieuphatsach">
+    <End Role="phieuphatsach" Type="QuanLyThuVienModel.phieuphatsach" Multiplicity="1" />
+    <End Role="sach_phieuphatsach" Type="QuanLyThuVienModel.sach_phieuphatsach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phieuphatsach">
+        <PropertyRef Name="MaPhieuPhatSach" />
+      </Principal>
+      <Dependent Role="sach_phieuphatsach">
+        <PropertyRef Name="MaPhieuPhatSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sach_phieumuonsach__sach">
+    <End Role="sach" Type="QuanLyThuVienModel.sach" Multiplicity="1" />
+    <End Role="sach_phieumuonsach" Type="QuanLyThuVienModel.sach_phieumuonsach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sach">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="sach_phieumuonsach">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="dausach_tacgia">
+    <End Role="dausach" Type="QuanLyThuVienModel.dausach" Multiplicity="*" />
+    <End Role="tacgia" Type="QuanLyThuVienModel.tacgia" Multiplicity="*" />
+  </Association>
+</Schema>

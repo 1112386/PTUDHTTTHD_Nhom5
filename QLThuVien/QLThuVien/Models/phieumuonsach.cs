@@ -14,13 +14,20 @@ namespace QLThuVien.Models
     
     public partial class phieumuonsach
     {
+        public phieumuonsach()
+        {
+            this.sach_phieumuonsach = new HashSet<sach_phieumuonsach>();
+        }
+    
         public int MaPhieuMuonSach { get; set; }
         public Nullable<int> MaDocGia { get; set; }
         public Nullable<System.DateTime> NgayMuon { get; set; }
         public Nullable<System.DateTime> NgayHetHan { get; set; }
         public string GhiChu { get; set; }
         public Nullable<int> SoLanGiaHan { get; set; }
+        public string DaTraHet { get; set; }
     
         public virtual docgia docgia { get; set; }
+        public virtual ICollection<sach_phieumuonsach> sach_phieumuonsach { get; set; }
     }
 }

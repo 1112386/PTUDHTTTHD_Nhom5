@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "MaThe";
+    Layout = "~/Views/Share/layout_ThuThu.cshtml";
+}
+@section title { MaThe }
+@section script{
+    <script src="~/Content/js/jquery.js"></script>
+    <script src="~/Content/js/barcode.js"></script>
+    }
+<div class="Total_MT">
+    <div class="form_the">
+        <form method="post" action="@Url.Action("GetInfo", "MuonTra")">
+            Mã thẻ: 
+            <input type="text" name="mathe" id="code"/>
+            <input type="submit" value="OK" />
+        </form>
+    </div>
+    @RenderPage("~/Views/Barcode/Index.cshtml")   
+</div>

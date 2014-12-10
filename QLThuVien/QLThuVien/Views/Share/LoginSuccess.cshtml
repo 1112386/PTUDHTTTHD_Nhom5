@@ -1,5 +1,14 @@
 ﻿<div class="loginsuccess">
-    <p>@Session["username"]</p>
-    <p><a href="Account/Logout">Thoát</a></p>
+    <p>
+        @if (Session["LoaiTaiKhoan"].ToString() == "1")
+        {
+            <a href="/DocGia/Index">@Session["username"]</a>
+        }
+        else 
+        { 
+            <a href="/ThuThu/Index">@Session["username"]</a> 
+        }
+    </p>
+    <p><a href="/Account/Logout">Thoát</a></p>
 </div>
 

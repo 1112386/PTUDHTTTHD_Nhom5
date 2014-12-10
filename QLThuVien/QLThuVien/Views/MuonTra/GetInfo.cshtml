@@ -1,0 +1,128 @@
+﻿@model IEnumerable<QLThuVien.Models.DSMuonModels>
+
+@{
+    ViewBag.Title = "GetInfo";
+    Layout = "~/Views/Share/layout_ThuThu.cshtml";
+}
+@section title { Thông tin thẻ }
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<link href="~/Content/css/Jquery_ui.css" rel="stylesheet" />
+<link href="~/Content/css/Nhan.css" rel="stylesheet" />
+<script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+ <script type="text/javascript">
+     $(function () {
+         $("#test_book").click("Test", function (e) {
+             e.preventDefault();
+
+             $.ajax({
+                 url: this.action,
+                 type: this.method,
+                 data: $(this).serialize(),
+                 success: function (data) {
+                     $("#book_info").html(data);
+                 }
+             });
+         });
+     });
+        </script>
+<div class="infoDG">
+<div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+		<li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">Thông tin cá nhân</a></li>
+		<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-2" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false"><a href="#tabs-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Mượn sách</a></li>
+		<li class="ui-state-default ui-corner-top ui-state-hover" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false"><a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">Trả sách</a></li>
+	</ul>
+	<div id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false" style="display: block;">
+	    <table>
+            <tr>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Địa chỉ
+                </th>
+                <th>
+                    Giới tính
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model.Take(1))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoTenDG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailDG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChiDG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GioiTinhDG)
+                </td>
+            </tr>
+          
+        }
+        </table>
+	</div>
+	<div id="tabs-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+		
+	</div>
+	<div id="tabs-3" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+       <div class="form_the">
+           <form id="test_book"  method="POST" action="/MuonTra/GetInfoBook">
+                Mã sách: 
+                <input type="text" name="mathesach" />
+           <input type="submit" value="Test" />
+            </form>
+        </div>
+        <div id="book_info">
+
+        </div>
+        <table class="bordered">
+            <thead>
+            <tr>
+                <th>
+                    Tên sách
+                </th>
+                <th>
+                    Mã cá biệt
+                </th>
+                <th>
+                    Ngày mượn
+                </th>
+                <th>
+                    Ngày trả
+                </th>
+            </tr>
+            </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenSach)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaCaBietSach)                   
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayMuon)                    
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayTra)
+                </td>
+            </tr>
+        }
+        </table>
+    </div>
+</div>
+</div>

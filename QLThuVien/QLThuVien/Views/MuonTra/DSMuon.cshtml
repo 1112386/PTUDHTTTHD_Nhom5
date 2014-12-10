@@ -1,0 +1,104 @@
+﻿@model IEnumerable<QLThuVien.Models.DSMuon>
+
+@{
+    ViewBag.Title = "DSMuon";
+    Layout = "~/Views/Share/layout_ThuThu.cshtml";
+}
+
+@section title { Danh sách mượn }
+@section script { <script src="~/Content/js/jquery.js"></script> }
+<div class="infoDG">
+<table class="bordered">
+    <tr>
+        <th>
+            Họ Tên
+        </th>
+        <th>
+            Ngày Mượn
+        </th>
+        <th>
+            Ngày trả
+        </th>
+        <th>
+            Số lần gia hạn
+        </th>
+        <th>
+            Số sách đang mượn
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    if(item.NgayTra < DateTime.Today)
+    { 
+      <tr class="trehen"> 
+        <td>
+            @Html.DisplayFor(modelItem => item.HoTen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayMuon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayTra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLanGiaHan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoSachDangMuon)
+        </td>
+        <td>
+             @Html.ActionLink("Chi tiết", "Edit", new { /* id=item.PrimaryKey */ }) |
+            <a class="sendmail" href="javascript:;" id="@Html.DisplayFor(modelItem => item.MaDocGia)">Nhắc nhở</a>
+        </td>
+    </tr>
+    }
+    else
+    {
+      <tr > 
+        <td>
+            @Html.DisplayFor(modelItem => item.HoTen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayMuon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayTra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLanGiaHan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoSachDangMuon)
+        </td>
+        <td>
+            @Html.ActionLink("Chi tiết", "Edit", new { /* id=item.PrimaryKey */ }) |
+            <a class="sendmail" href="javascript:;" id="@Html.DisplayFor(modelItem => item.MaDocGia)">Nhắc nhở</a>
+        </td>
+    </tr>
+    }
+}
+
+</table>
+    <script>
+        $(document).ready(function () {
+            $(".sendmail").click(function () {
+                var e = this;
+                $(e).html("Đang xử lí");
+                $.ajax({
+                    type: 'GET',
+                    url: '/SendMailer/Remind?id='+ this.id,
+                    success: function (o) {
+                        if (o === "1") {
+                            $(e).html("Đã gửi");
+                        }
+                        else {
+                            alert("Xảy ra lỗi");
+                            $(e).html("Nhắc nhở");
+                        }
+                       
+                    }
+                });
+            });
+        });
+    </script>
+</div>

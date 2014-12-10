@@ -1,0 +1,29 @@
+﻿@model IEnumerable<QLThuVien.Models.SachModels>
+
+@{
+    ViewBag.Title = "GetInfoBook";
+}
+
+<table>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="tieude"> Tên sách: </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSach)
+        </td>
+    </tr>
+    <tr>
+        <td class="tieude"> Mã cá biệt: </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaCaBiet)
+        </td>
+    </tr>
+    <tr>
+        <td class="tieude"> Nhà xuất bản: </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhaXB)
+        </td>
+    </tr>
+}
+</table>

@@ -1,0 +1,104 @@
+ div {
+	/*border : 1px solid red;*/
+ }
+ 
+ #n-page {
+	 width: 680px;
+	 height: 670px;
+	 background:#fff;
+	 overflow:hidden;
+	 margin: 0 auto;
+ }
+
+#n-avarta {
+    height : 150px;
+}
+#n-info {
+    height : 800px;
+}
+
+#n-overflow {
+    height:300px;
+    overflow:auto;
+    border : 1px solid #BEC1C6;
+}
+/************************Kieu table******************************/ 
+
+ #n-tab01{
+     margin-left:20px;
+	 text-align:left;
+	 margin-top: 20px;	 
+ } 
+#n-tab02 {
+	 width:480px;
+	 text-align:left;
+	 border-collapse:collapse;	 
+ }
+ 
+ #n-tab02 td, #n-p{
+    font-family:"Times New Roman", Times, serif;
+    color:black;
+    font-size:18px;
+    text-align:left;
+	padding-top: 20px;
+ }
+
+#n-tab03, #n-tab04, #n-tab05 {
+     width : 680px;
+}
+#n-tab04 .n-col01 {
+    width: 100px;
+}
+#n-tab04 .n-col02 {
+    width: 190px;
+}
+#n-tab04 td {
+    height : 25px;
+}
+#n-tab05 th {
+    height : 25px;
+    text-align:left;
+}
+#n-tab05 .n-col03 {
+    width : auto;
+}
+#n-tab05 .n-col04 {
+    width :120px;
+}
+#n-tab05 .n-col05 {
+    width :100px;
+}
+ /************************Kieu submit******************************/ 
+ #n-submit {
+	width: 70px;
+	height: 30px;
+	margin: 5px;
+	text-align:center;
+    -webkit-border-radius:5px;
+   // background:#617AAC;
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    color:black;
+    font-family:Arial;
+    font-size:13px;
+    font-weight: bold;
+ }
+ /*
+#submit:hover {
+    background: #415A8F;	
+}*/
+
+ /************************Kieu text******************************/
+#n-text {
+    width: 200px;
+    height: 25px;
+    text-align:left;
+    -webkit-border-radius:5px;
+}
+/*****************************link********************************/
+#n-a:link {text-decoration: none;}
+#n-a:visited {text-decoration: none;}
+ 
+ 
+ 
+ 
